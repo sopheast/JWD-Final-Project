@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+        
+    <title>Form Validation</title>
+  
+
+
+</head>
+<body>
+    <div id="containerx"> 
+         <div id="task">
+             <h2> My Tasks </h2>
+         </div>
+           
+            <button type="button" class="btn btn-outline-info btn-rounded waves-effect" data-toggle="modal" data-target="#exampleModal">
+                Add Task &nbsp;&nbsp;&nbsp;<i class="fas fa-tasks fa-1x"></i>
+            </button>
+           
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Add Task</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- <div class="container task-form"> -->
+                            <form class="needs-validation">
+                                <div class="form-group">
+                                  <label for="text">Task Name</label>
+                                  <span class="mandatory-flag">*</span>
+                                  <input type="text" class="form-control"  placeholder="Give a name to the task" id="taskName" required>
+                                   <span id="nmErrMsg"></span>
+                                   
+                                  <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Task Description</label>
+                                    <span class="mandatory-flag">*</span>
+                                    
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"placeholder="Details" required></textarea>
+                                    <span id="descMessg"></span>  
+                                </div>
+                                  <br> 
+                                  <label for="text">Assign To</label>
+                                  <span class="mandatory-flag">*</span>
+                                  <input type="text" class="form-control" id="assign" placeholder="Whom you have assigned to" required>
+                                  <span id="assignMessg"></span>
+                                  <br>
+                                  <label for="date">Due Date</label>
+                                  <span class="mandatory-flag">*</span>
+                                  <input type="date" class="form-control" id="due" required><br>
+                                                                 
+                                  <div class="form-group">
+                                    <label for="drop-down-status">Status</label>
+                                    <span class="mandatory-flag">*</span>
+                                    <select class="form-control" id="task-status" >
+                                      <option >To Do</option>
+                                      <option >In Progress</option>
+                                      <option>Review</option>
+                                      <option>Done</option>
+                                    </select>
+                                     
+                                  </div>
+                                
+                                <button type="submit" class= "btn btn-outline-info btn-rounded waves-effect" id="addBtn">Submit</button>
+                                
+                            </form>
+                            
+                            
+                            
+                            </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>  
+                
+               
+                <!--Accordion wrapper-->
+            <div class="accordion md-accordion accordion-4" id="accordionEx2" role="tablist" aria-multiselectable="true">
+
+                    <!-- Accordion card -->
+                <div class="card">
+                 <!-- Card header -->
+                    <div class="card-header z-depth-1 teal lighten-5" role="tab" id="heading10">
+                        <a data-toggle="collapse" data-parent="#accordionEx2" href="#collapse10" aria-expanded="true"
+                            aria-controls="collapse10">
+                            <h4 class="mb-0 black-text  font-weight-bold text-uppercase">
+                                Create 5 card deck layout.&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                                &nbsp; &nbsp; &nbsp;  <i class="far fa-trash-alt fa-1x"></i>
+                            </h4>
+                        </a>
+                    </div>
+                
+                    <!-- Card body -->
+                      <div id="collapse10" class="collapse show" role="tabpanel" aria-labelledby="heading10"
+                            data-parent="#accordionEx2">
+                            <div class="card-body lack-text">
+                            <p class="text-body">Dated : 26th July 2020</p>
+                            <p class="text-body">Creat a 5 card deck layout </p>
+                            <p class="text-body">Assigned to JB</p>
+                            
+                            </div>
+                     </div>
+                </div>
+                                    
+                    <!-- Accordion card -->
+                <div class="card">
+                
+                    <!-- Card header -->
+                     <div class="card-header z-depth-1 blue lighten-5" role="tab" id="heading11">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse11"
+                            aria-expanded="false" aria-controls="collapse11">
+                            <h4 class="mb-0 black-text  font-weight-bold text-uppercase">
+                                Create a task planner.&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                                &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="far fa-trash-alt fa-1x"></i>
+                            </h4>
+                        </a>
+                    </div>
+                
+                    <!-- Card body -->
+                    <div id="collapse11" class="collapse" role="tabpanel" aria-labelledby="heading11"
+                        data-parent="#accordionEx2">
+                        <div class="card-body  white-text">
+                            <p class="text-body">Dated : 26th July 2020</p>
+                            <p class="text-body">Creat a task planner </p>
+                            <p class="text-body">Assigned to JB</p>
+                        </div>
+                    </div>
+                </div>
+                    
+                
+                    <!-- Accordion card -->
+                <div class="card">
+                
+                    <!-- Card header -->
+                    <div class="card-header z-depth-1 yellow lighten-5" role="tab" id="heading12">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse12"
+                            aria-expanded="false" aria-controls="collapse12">
+                            <h4 class="mb-0 black-text  font-weight-bold text-uppercase">
+                                Add Functions to the task.&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                                &nbsp; &nbsp; &nbsp; <i class="far fa-trash-alt fa-1x"></i>
+                            </h4>
+                        </a>
+                    </div>
+                
+                    <!-- Card body -->
+                    <div id="collapse12" class="collapse" role="tabpanel" aria-labelledby="heading12"
+                        data-parent="#accordionEx2">
+                        <div class="card-body  black-text">
+                            <p class="text-body">Dated : 26th July 2020</p>
+                            <p class="text-body">Add functions task planner </p>
+                            <p class="text-body">Assigned to JB</p>
+                        </div>
+                    </div>
+                </div>
+                    
+                
+                    <!-- Accordion card -->
+                <div class="card">
+                
+                    <!-- Card header -->
+                    <div class="card-header z-depth-1 pink lighten-5" role="tab" id="heading13">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse13"
+                        aria-expanded="true" aria-controls="collapse13">
+                        <h4 class="mb-0 black-text  font-weight-bold text-uppercase">
+                            Add & Delete the tasks.&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp; &nbsp; &nbsp; <i class="far fa-trash-alt fa-1x"></i>
+                        </h4>
+                        </a>
+                    </div>
+                
+                    <!-- Card body -->
+                    <div id="collapse13" class="collapse" role="tabpanel" aria-labelledby="heading13"
+                        data-parent="#accordionEx2">
+                        <div class="card-body black-text">
+                            <p class="text-body">Dated : 26th July 2020</p>
+                            <p class="text-body">Add & delete tasks </p>
+                            <p class="text-body">Assigned to JB</p>
+                        </div>
+                    </div>
+                </div>
+                    
+                
+                    <!-- Accordion card -->
+                 <div class="card">
+                
+                    <!-- Card header -->
+                    <div class="card-header z-depth-1 orange lighten-4" role="tab" id="heading14">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse14"
+                        aria-expanded="false" aria-controls="collapse14">
+                        <h4 class="mb-0 black-text font-weight-bold text-uppercase">
+                            Make presentation.&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="far fa-trash-alt fa-1x"></i>
+                        </h4>
+                        </a>
+                    </div>
+                
+                    <!-- Card body -->
+                    <div id="collapse14" class="collapse" role="tabpanel" aria-labelledby="heading14"
+                        data-parent="#accordionEx2">
+                        <div class="card-body  black-text">
+                            <p class="text-body">Dated : 26th July 2020</p>
+                            <p class="text-body">Make Presentation </p>
+                            <p class="text-body">Assigned to JB & Sophie </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+      
+
+    </div>
+                
+            
+  
+ 
+    
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/validate.js"></script>
+    
+</body>
+  
+  
+
+</body>
+</html>
