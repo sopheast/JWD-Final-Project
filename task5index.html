@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+
+ const task={
+     id:0,
+     name:"",
+     description:'',
+     assignedTo:'',
+     dueDate:'',
+     status:'',
+
+ };
+ class Taskmanager {
+     constructor(id,name,description,assignedTo,dueDate,status){
+         this.id=id;
+         this.description=description;
+         this.assignedTo=assignedTo;
+         this.dueDate=dueDate;
+         this.status=status;
+         this.getalltasks= function(){
+             return "My task no is :"+this.id+"<br/>" +"The description is:"+this.description+"<br/>"+"Assigned To:"+this.assignedTo+"<br/>"+"The due date is:"+ this.dueDate +"<br/>"+"Status is:"+this.status
+         }
+     }
+ }
+  let task1 = new Taskmanager(1,"My First task","First task in the planner","JB",'14-08-2020',"Todo");
+  document.write(task1.getalltasks()+"<br/>");
+
+ let task2 = new Taskmanager(2,"Second task","Second task in the planner","Sophie",'15-08-2020.',"Todo");
+  document.write(task2.getalltasks()+"</br>")
+
+  let task3= new Taskmanager(3,"Third task","Third task in the planner","JB",'16-08-2020',"Todo");
+  document.write(task3.getalltasks()+"</br>")
+  let task4 =new Taskmanager(4,"Fourth task","Fourth task in the planner","JB",'17-08-2020',"Done");
+  document.write(task4.getalltasks()+"</br>")
+  let task5= new Taskmanager(5,"Fith Task","Fith Task in the planner","Sophie","18-08-2020","Todo");
+  document.write(task5.getalltasks()+"<br/>");
+  
+    </script>
+</body>
+</html>
