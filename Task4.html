@@ -105,24 +105,68 @@
                     </div>
                     <div class="modal-body">
                         <!-- <div class="container task-form"> -->
-                            <form>
+                            <form class="needs-validation" novalidate>
                                 <div class="form-group">
-                                  <label for="text">Task Name</label>
-                                  <input type="text" class="form-control" id="name">
-                                  <label for="text"> Task Description</label>
-                                  <input type="text" class="form-control" id="description">
+                                  <label for="taskName">Task Name</label>
+                                  <input 
+                                    type="input" 
+                                    class="form-control" 
+                                    id="taskName"
+                                  required>
+                                  <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
+                                  </div>
+                                  <div class="form-group">
+                                  <label for="taskDescription"> Task Description</label>
+                                  <input 
+                                  type="input" 
+                                  class="form-control" 
+                                  id="taskDescription"
+                                  required>
+                                  <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
+                                  </div>
+                                  <div class="form-group">
                                   <label for="text">Assign To</label>
-                                  <input type="text" class="form-control" id="assign">
+                                  <input 
+                                  type="text" 
+                                  class="form-control" 
+                                  id="assign"
+                                  required>
+                                  <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
+                                  </div>
+                                  <div class="form-group">
                                   <label for="date">Due Date</label>
-                                  <input type="date" class="form-control" id="due">
+                                  <input 
+                                  type="date" 
+                                  class="form-control" 
+                                  id="due"
+                                  required>
+                                  <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
+                                  
                                   <div class="form-group">
                                     <label for="drop-down-status">Status</label>
-                                    <select class="form-control" id="task-status">
+                                    <select 
+                                    class="form-control" 
+                                    id="task-status"
+                                    required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
                                       <option>To Do</option>
                                       <option>In Progress</option>
                                       <option>Review</option>
                                       <option>Done</option>
                                     </select>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
                                   </div>
                                 <button type="submit" class= "btn btn-outline-info btn-rounded waves-effect">Submit</button>
                               </form>
@@ -279,6 +323,7 @@
  
     
  <!-- Optional JavaScript -->
+ <script src="app.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
     <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
