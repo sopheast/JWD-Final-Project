@@ -1,0 +1,56 @@
+#containerx{
+    max-width: 1200px;
+    margin-left: 75px;
+    margin-top: 75px;
+    border: 1px solid rgb(216, 216, 216);
+    background-color: #F5F3E7;
+}
+#task h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: initial;
+    font-weight: 550;
+}
+
+.i{
+ position: relative;
+ /* Adjust these values accordingly */
+ float: right;
+}
+
+.far {
+ color: #669FAB;
+ 
+ 
+}
+ 
+.task-heading{
+   font-size: 20px;
+   text-decoration: none;
+   
+}  
+.btn {
+   text-decoration: none;
+   text-emphasis: none;
+}
+ 
+.far{
+   margin-right: 0px;
+   padding-right: 1px;
+}
+
+ .card-body{
+    font-size: 20px;
+    background-color: #F5F3E7;
+     
+ }
+ .text-body{
+     margin-left: 20px;
+ }
+ .btn{
+     font-size: 20px;
+ }
+ .modal-body{
+     background-color: #F5F3E7 ;
+ }
+ .mandatory-flag{
+     color: red;
