@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+        
+    <title>Task Planner</title>
+  
+
+
+</head>
+<body>
+    <div id="containerx"> 
+         <div id="task">
+             <h2> My Tasks </h2>
+         </div>
+           
+            <button type="button"  id="create-button" class="btn btn-outline-info btn-rounded waves-effect" data-toggle="modal" data-target="#exampleModal">
+                Add Task &nbsp;&nbsp;&nbsp;<i class="fas fa-tasks fa-1x"></i>
+            </button>
+            <div id="tasks" class="row">
+
+            </div>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Add Task</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <form  id="task-form"  action="">
+                        <div class="modal-body"  id="task-id">
+                            <!-- <div class="container task-form"> -->
+                                <form class="needs-validation">
+                                    <div class="form-group">
+                                    <label for="taskName">Task Name</label>
+                                    <span class="mandatory-flag">*</span>
+                                    <input type="text"    class="form-control"  placeholder="Give a name to the task" id="taskName" required>
+                                    <span id="nmErrMsg"></span>
+                                    
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Task Description</label>
+                                        <span class="mandatory-flag">*</span>
+                                        
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"placeholder="Details" required></textarea>
+                                        <span id="descMessg"></span>  
+                                    </div>
+                                    <br> 
+                                    <label for="text">Assign To</label>
+                                    <span class="mandatory-flag">*</span>
+                                    <input type="text" class="form-control" id="assign" placeholder="Whom you have assigned to" required>
+                                    <span id="assignMessg"></span>
+                                    <br>
+                                    <label for="date">Due Date</label>
+                                    <span class="mandatory-flag">*</span>
+                                    <input type="date" class="form-control" id="due" required><br>
+                                                                    
+                                    <div class="form-group">
+                                        <label for="drop-down-status">Status</label>
+                                        <span class="mandatory-flag">*</span>
+                                        <select class="form-control" id="task-status" >
+                                        <option >To Do</option>
+                                        <option >In Progress</option>
+                                        <option>Review</option>
+                                        <option>Done</option>
+                                        </select>
+                                        
+                                    </div>
+                                    
+                                    <button type="submit" class= "btn btn-outline-info btn-rounded waves-effect" id="addBtn">Submit</button>
+                                    
+                                </form>
+                                
+                                
+                                
+                            </div>
+                    </form>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>  
+                
+               
+              
+                
+            
+  
+ 
+    
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/validate.js"></script>
+    <script src="/dynamictasks.js"></script>
+    
+</body>
+  
+  
+
+</body>
+</html>
